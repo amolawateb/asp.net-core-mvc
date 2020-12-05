@@ -7,15 +7,20 @@ namespace EmployeeManagement.Models
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        public List<Employee> _employeeList;
+        private List<Employee> _employeeList;
 
         public EmployeeRepository()
         {
             _employeeList = new List<Employee>()
             {
-                new Employee(){Id=1,Name="Amol", Department="Dev", Email="amol@abc.com"},
-                new Employee(){Id=1,Name="Carol", Department="Test", Email="carol@abc.com"},
+                new Employee(){Id=1,Name="Amol", Department=Dept.IT, Email="amol@abc.com"},
+                new Employee(){Id=2,Name="Carol", Department=Dept.HR, Email="carol@abc.com"},
             };
+        }
+
+        public IEnumerable<Employee> GetAllEmployee()
+        {
+            return _employeeList;
         }
 
         public Employee GetEmployee(int id)

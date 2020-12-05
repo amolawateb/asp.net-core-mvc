@@ -73,7 +73,16 @@ namespace EmployeeManagement
 
             app.UseStaticFiles(); //Will serve static files from wwwroot folder such as images js, css
 
-            app.UseMvcWithDefaultRoute();
+
+            //app.UseMvcWithDefaultRoute();  //add MVC suport with default route method
+
+            //add MVC support without default rotre method
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            //app.UseMvc();
 
             //app.Run(async (context) =>
             //{
