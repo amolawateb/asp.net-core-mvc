@@ -15,8 +15,8 @@
         </div>
         <img class="card-img-top" src="~/images/logo.png" />
         <div class="card-footer text-center">
-            <a asp-controller="home" asp-action="details" asp-route-id="emp.id" class="btn btn-primary m-1">View</a>
-            <a asp-controller="home" asp-action="details" asp-route-id="emp.id" class="btn btn-secondary m-1">Edit</a>
-            <a asp-controller="home" asp-action="details" asp-route-id="emp.id" class="btn btn-danger m-1">Delete</a>
+            <a asp-controller="home" asp-action="Details" asp-route-id=@emp.Id class="btn btn-primary m-1">View</a>
+            <a asp-controller="home" asp-action="Edit" asp-route-id=@emp.Id class="btn btn-secondary m-1">Edit</a>
+            <a asp-controller="home" asp-action="Delete" asp-route-id=@emp.Id class="btn btn-danger m-1">Delete</a>
         </div>
     }
